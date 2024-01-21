@@ -12,9 +12,9 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog isFavorite={false} />} />
-          <Route path="/package.jsonfavorite" element={<Catalog isFavorite={true} />} />
+          <Route path="" element={<Home />} />
+          <Route path="catalog" element={<Catalog isFavorite={false} />} />
+          <Route path="favorite" element={<Catalog isFavorite={true} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
