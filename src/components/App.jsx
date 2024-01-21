@@ -15,7 +15,7 @@ const App = () => {
           <Route path="" element={<Home />} />
           <Route path="catalog" element={<Catalog isFavorite={false} />} />
           <Route path="favorite" element={<Catalog isFavorite={true} />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
       <GlobalStyle />
