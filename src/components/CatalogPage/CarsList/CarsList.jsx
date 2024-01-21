@@ -1,14 +1,16 @@
 import { useSelector } from "react-redux";
-import { selectCars, selectFavorites, selectFilteredCars } from "../../../redux/selectors";
+import { selectCars, selectFavorites, selectFilteredCars, selectIsLoading } from "../../../redux/selectors";
 import { CarsListWrapper } from "./CarsList.styled"
 import { ListItem } from "./ListItem"
 import { Link } from 'react-router-dom';
+import { Loader } from "../../Loader";
 
 export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
   const cars = useSelector(selectCars);
   const favoriteCars = useSelector(selectFavorites);
   const filteredCars = useSelector(selectFilteredCars);
-
+  const isLoading = useSelector(selectIsLoading);
+  
   const loadMoreCars = () => {
     setCurrentPage(currentPage + 1);
   }
@@ -40,7 +42,7 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
           </Link>
         </>
       ) : (
-        <CarsListWrapper>
+     <CarsListWrapper>
           <ListItem
             cars={
               isFavorite
@@ -52,7 +54,7 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
           />
         </CarsListWrapper>
       )}
-      {currentPage * 12 <=
+      { isLoading ? <Loader/> : (currentPage * 12 <=
         (filteredCars.length ? filteredCars.length : cars.length) &&
         !isFavorite && (
           <button
@@ -72,7 +74,7 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
           >
             Load more
           </button>
-        )}
+        ))}
     </>
   );
 };
