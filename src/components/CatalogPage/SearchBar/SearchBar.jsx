@@ -114,6 +114,10 @@ dispatch(filterValue(""));
           background: "transparent",
           cursor: "pointer",
           display: "block",
+          "&:is(:hover, :focus)":{
+            color: "#0B44CD",
+          },
+          transition: "200ms linear"
         }}
         onClick={handleResetFilters}
       >
@@ -133,6 +137,10 @@ dispatch(filterValue(""));
           background: "#3470FF",
           color: "white",
           cursor: "pointer",
+          "&:is(:hover, :focus)":{
+            background: "#0B44CD",
+          },
+          transition: "background 200ms linear"
         }}
       >
         Search

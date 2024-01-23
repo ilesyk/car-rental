@@ -69,6 +69,10 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
               margin: '0 auto 150px',
               cursor: 'pointer',
               display: 'block',
+              "&:is(:hover, :focus)":{
+                background: "#0B44CD",
+              },
+              transition: "background 200ms linear"
             }}
             onClick={loadMoreCars}
           >

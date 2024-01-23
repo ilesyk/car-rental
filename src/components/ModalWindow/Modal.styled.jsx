@@ -9,6 +9,10 @@ export const ModalClose = styled.button`
   top: 16px;
   right: 16px;
   cursor: pointer;
+  &:is(:hover, :focus){
+    fill: #0B44CD;
+  };
+  transition: fill 200ms linear;
 `;
 
 export const ModalHeaders = styled.p`
@@ -36,6 +40,10 @@ export const RentalLink = styled.a`
   font-size: 14px;
   font-weight: 600;
   line-height: 1.43;
+  &:is(:hover, :focus){
+    background: #0B44CD;
+  };
+  transition: 200ms linear;
 `;
 
 export const RentalConditionsWrap = styled.div`

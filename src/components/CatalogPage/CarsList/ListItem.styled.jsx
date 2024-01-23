@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 
-export const ListItemWrapper = styled.div`
+export const ListItemWrapper = styled.li`
   display: flex;
   flex-direction: column;
   width: 274px;
@@ -70,4 +70,8 @@ export const SeeMoreButton = styled.button`
   position: absolute;
   bottom: 0;
   cursor: pointer;
+  &:is(:hover, :focus){
+    background: #0B44CD;
+  };
+  transition: background 200ms linear;
 `;
