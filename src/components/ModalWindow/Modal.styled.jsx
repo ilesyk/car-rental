@@ -10,9 +10,9 @@ export const ModalClose = styled.button`
   right: 16px;
   cursor: pointer;
   &:is(:hover, :focus){
-    fill: #0B44CD;
+    color: #0B44CD;
   };
-  transition: fill 200ms linear;
+  transition: color 200ms linear;
 `;
 
 export const ModalHeaders = styled.p`

@@ -37,6 +37,10 @@ export const FavoriteButton = styled.button`
   border: none;
   background: transparent;
   cursor: pointer;
+  &:is(:hover, :focus){
+    transform: scale(1.1);
+  };
+  transition: transform 200ms linear;
 `;
 export const ModelInfo = styled.p`
   position: relative;

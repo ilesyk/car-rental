@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectCars, selectFavorites, selectFilteredCars, selectIsLoading } from "../../../redux/selectors";
-import { CarsListWrapper } from "./CarsList.styled"
+import { CarsListWrapper, LoadMoreButton } from "./CarsList.styled"
 import { ListItem } from "./ListItem"
 import { Link } from 'react-router-dom';
 import { Loader } from "../../Loader";
@@ -57,27 +57,9 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
       { isLoading ? <Loader/> : (currentPage * 12 <=
         (filteredCars.length ? filteredCars.length : cars.length) &&
         !isFavorite && (
-          <button
-            style={{
-              color: '#3470FF',
-              fontSize: '16px',
-              fontWeight: '500',
-              lineHeight: '1.5',
-              textDecorationLine: 'underline',
-              border: 'none',
-              background: 'transparent',
-              margin: '0 auto 150px',
-              cursor: 'pointer',
-              display: 'block',
-              "&:is(:hover, :focus)":{
-                background: "#0B44CD",
-              },
-              transition: "background 200ms linear"
-            }}
-            onClick={loadMoreCars}
-          >
+          <LoadMoreButton onClick={loadMoreCars}>
             Load more
-          </button>
+          </LoadMoreButton>
         ))}
     </>
   );
