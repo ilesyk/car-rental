@@ -104,44 +104,12 @@ dispatch(filterValue(""));
         )}
       />
       {(resetFilter || filter) && <ResetFiltersButton
-        // style={{
-        //   color: "#3470FF",
-        //   fontSize: "16px",
-        //   fontWeight: "500",
-        //   lineHeight: "1.5",
-        //   textDecorationLine: "underline",
-        //   border: "none",
-        //   background: "transparent",
-        //   cursor: "pointer",
-        //   display: "block",
-        //   "&:is(:hover, :focus)":{
-        //     color: "#0B44CD",
-        //   },
-        //   transition: "color 200ms linear"
-        // }}
         onClick={handleResetFilters}
       >
         Reset filters
       </ResetFiltersButton>}
       <SearchButton
         onClick={handleSearch}
-        // style={{
-        //   display: "flex",
-        //   maxWidth: "136px",
-        //   height: "48px",
-        //   padding: "14px 44px",
-        //   justifyContent: "center",
-        //   border: "none",
-        //   alignItems: "center",
-        //   borderRadius: "12px",
-        //   background: "#3470FF",
-        //   color: "white",
-        //   cursor: "pointer",
-        //   "&:is(:hover, :focus)":{
-        //     background: "#0B44CD",
-        //   },
-        //   transition: "background 200ms linear"
-        // }}
       >
         Search
       </SearchButton>

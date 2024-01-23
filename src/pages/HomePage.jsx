@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeadWrap, HomePageHead, HomePageTags, HomePageText, HomePageWrap } from "../components/HomePage/HomePage.styled";
+import { HeadWrap, HomePageHead, HomePageTags, HomePageText, HomePageWrap, GoToCatalogButton } from "../components/HomePage/HomePage.styled";
 
 const Home = () => {
     return (
@@ -16,22 +16,9 @@ const Home = () => {
         </HomePageText>
         <HomePageTags>Book your car now and enjoy your trip!</HomePageTags>
         <Link to="catalog">
-          <button
-            style={{
-              margin: "0 auto",
-              display: "flex",
-              height: "48px",
-              padding: "14px 44px",
-              justifyContent: "center",
-              border: "none",
-              alignItems: "center",
-              borderRadius: "12px",
-              background: "#3470FF",
-              color: "white",
-            }}
-          >
+          <GoToCatalogButton>
             Go to catalog
-          </button>
+          </GoToCatalogButton>
         </Link>
       </HomePageWrap>
     );

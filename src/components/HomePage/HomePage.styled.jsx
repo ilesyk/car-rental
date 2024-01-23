@@ -36,3 +36,20 @@ export const HomePageText = styled.p`
     margin-left: 60px;
   }
 `;
+
+export const GoToCatalogButton = styled.button`
+margin: 0 auto;
+              display: flex;
+              height: 48px;
+              padding: 14px 44px;
+              justify-content: center;
+              border: none;
+              align-items: center;
+              border-radius: 12px;
+              background: #3470FF;
+              color: white;
+              &:is(:hover, :focus) {
+                background: #0B44CD;
+              };
+              transition: background 200ms linear;
+`
