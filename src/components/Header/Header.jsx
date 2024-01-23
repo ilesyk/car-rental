@@ -4,12 +4,12 @@ export const Header = () => {
   return (
     <header>
       <HeaderWrapper>
-        <Link style={{position: "absolute", left:"30px", top:"6px"}} to="/">
+        <Link to="/">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="40"
+            height="40"
             viewBox="0 0 32 32"
             stroke="none"
             fill="white"
@@ -18,15 +18,10 @@ export const Header = () => {
             <path d="M25.357 0h-18.714c-3.663 0-6.643 2.98-6.643 6.643v18.713c0 3.663 2.98 6.644 6.643 6.644h18.714c3.663 0 6.643-2.98 6.643-6.644v-18.713c0-3.663-2.98-6.643-6.643-6.643zM30.785 25.356c0 2.993-2.435 5.429-5.428 5.429h-18.714c-2.993 0-5.428-2.435-5.428-5.429v-18.713c0-2.993 2.435-5.428 5.428-5.428h18.714c2.993 0 5.428 2.435 5.428 5.428v18.713z"></path>
           </svg>
         </Link>
-        <Link to="/">
-          <HeaderLink>Home</HeaderLink>
-        </Link>
-        <Link to="/catalog">
-          <HeaderLink>Catalog</HeaderLink>
-        </Link>
-        <Link to="/favorite">
-          <HeaderLink>Favorite</HeaderLink>
-        </Link>
+        <div style={{display: "flex", gap:"10px"}} >
+          <HeaderLink to="/">Home</HeaderLink>
+          <HeaderLink to="/catalog">Catalog</HeaderLink>
+          <HeaderLink to="/favorite">Favorite</HeaderLink></div>
       </HeaderWrapper>
     </header>
   );

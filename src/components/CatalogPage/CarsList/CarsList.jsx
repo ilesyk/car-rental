@@ -18,8 +18,8 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
   return (
     <>
       {isFavorite && !favoriteCars.length ? (
-        <>
-          <h2 style={{ maxWidth: '320px', margin: '50px auto 50px' }}>
+        <div style={{padding: "10px"}}>
+          <h2 style={{ maxWidth: '320px', margin: '50px auto 50px', textAlign: "center" }}>
             Your favorites list is empty
           </h2>
           <Link to="/catalog">
@@ -40,7 +40,7 @@ export const CarsList = ({ isFavorite, currentPage, setCurrentPage }) => {
               Go to catalog
             </button>
           </Link>
-        </>
+        </div>
       ) : (
      <CarsListWrapper>
           <ListItem
