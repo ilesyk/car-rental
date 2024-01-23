@@ -48,6 +48,7 @@ margin: 0 auto;
               border-radius: 12px;
               background: #3470FF;
               color: white;
+              cursor: pointer;
               &:is(:hover, :focus) {
                 background: #0B44CD;
               };

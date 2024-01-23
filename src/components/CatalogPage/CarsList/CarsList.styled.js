@@ -20,7 +20,7 @@ color: #3470FF;
               cursor: pointer;
               display: block;
               &:is(:hover, :focus) {
-                background: #0B44CD;
+                color: #0B44CD;
               };
-              transition: background 200ms linear;
+              transition: color 200ms linear;
 `
