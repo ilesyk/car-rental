@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../theme";
@@ -12,12 +11,6 @@ export const HeaderWrapper = styled.div`
   padding: 20px;
   margin-bottom: 30px;
   position: relative;
-  @media (min-width: 768px) {
-    gap: 30px;
-  }
-  @media (min-width: 1440px) {
-    margin-left: auto;
-  }
 `;
 
 export const HeaderLink = styled(NavLink)`
