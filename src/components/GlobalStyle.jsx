@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
 
    html {
     box-sizing: content-box;
-    overflow-x: hidden;
   }
 
   *:before,
