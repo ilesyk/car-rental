@@ -27,7 +27,7 @@ To run the application locally, follow these steps:
 
 1. Clone the repository:
 
-https://github.com/ilesyk/car-rental.git
+   https://github.com/ilesyk/car-rental.git
 
 2. Install dependencies:
 npm install
