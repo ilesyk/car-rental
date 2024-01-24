@@ -18,7 +18,6 @@ export const HeaderLink = styled(NavLink)`
   font-size: 18px;
   font-weight: 500;
   position: relative;
-  padding-bottom: 8px;
   &.active {
     &::after {
       content: '';
@@ -26,10 +25,19 @@ export const HeaderLink = styled(NavLink)`
       height: 4px;
       background-color: white;
       position: absolute;
-      bottom: 0;
+      border-radius: 2px;
+      top: 28px;
       left: 0;
       right: 0;
     }
   }
 `;
+
+export const HeaderLinkWrap = styled.div`
+display: flex;
+ gap:10px;
+ @media (min-width: 768px) {
+  gap: 30px;
+}
+`
 

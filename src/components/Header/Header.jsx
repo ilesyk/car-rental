@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeaderLink, HeaderWrapper } from "./Header.styled";
+import { HeaderLink, HeaderWrapper, HeaderLinkWrap } from "./Header.styled";
 export const Header = () => {
   return (
     <header>
@@ -18,12 +18,10 @@ export const Header = () => {
             <path d="M25.357 0h-18.714c-3.663 0-6.643 2.98-6.643 6.643v18.713c0 3.663 2.98 6.644 6.643 6.644h18.714c3.663 0 6.643-2.98 6.643-6.644v-18.713c0-3.663-2.98-6.643-6.643-6.643zM30.785 25.356c0 2.993-2.435 5.429-5.428 5.429h-18.714c-2.993 0-5.428-2.435-5.428-5.429v-18.713c0-2.993 2.435-5.428 5.428-5.428h18.714c2.993 0 5.428 2.435 5.428 5.428v18.713z"></path>
           </svg>
         </Link>
-        <div style={{display: "flex", gap:"10px",  "@media (min-width: 768px)": {
-    gap: "30px"
-  }}} >
+        <HeaderLinkWrap>
           <HeaderLink to="/">Home</HeaderLink>
           <HeaderLink to="/catalog">Catalog</HeaderLink>
-          <HeaderLink to="/favorite">Favorite</HeaderLink></div>
+          <HeaderLink to="/favorite">Favorite</HeaderLink></HeaderLinkWrap>
       </HeaderWrapper>
     </header>
   );
