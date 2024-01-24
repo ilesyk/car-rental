@@ -40,10 +40,12 @@ export const ListItem = ({ cars }) => {
   const favoriteCars = useSelector(selectFavorites);
   const handleOpen = (car) => {
     setClickedCar(car);
+    document.body.style.overflow = 'hidden';
     setIsOpen(true);
   };
   const handleClose = () => {
     setClickedCar(null);
+    document.body.style.overflow = '';
     setIsOpen(false);
   };
   const [clickedCar, setClickedCar] = useState(null);
