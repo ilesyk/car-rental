@@ -12,7 +12,7 @@ const customStyles = {
 
   content: {
     maxWidth: "542px",
-    maxHeight: "80vh",
+    maxHeight: "90vh",
     top: "50%",
     left: "50%",
     right: "auto",
