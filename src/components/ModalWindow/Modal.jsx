@@ -32,6 +32,7 @@ export const CarModal=({car, isOpen, handleClose})=> {
   return (
     <div>
       <Modal
+        disableScroll
         isOpen={isOpen}
         onRequestClose={() => {
           handleClose();
@@ -40,30 +41,30 @@ export const CarModal=({car, isOpen, handleClose})=> {
         contentLabel="Car Details Modal"
       >
         <ModalClose onClick={handleClose}>
-          <CloseIcon style={{ width: "24px", height: "24px" }} />
+          <CloseIcon style={{ width: '24px', height: '24px' }} />
         </ModalClose>
         <div
           style={{
-            maxWidth: "462px",
-            height: "248px",
-            marginBottom: "14px",
-            borderRadius: "14px",
+            maxWidth: '462px',
+            height: '248px',
+            marginBottom: '14px',
+            borderRadius: '14px',
             background: `linear-gradient(180deg, rgba(18, 20, 23, 0.5) 2.5%, rgba(18, 20, 23, 0) 41.07%), url(${car.img})`,
-            backgroundPosition: "50%",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundHeight: "100%",
+            backgroundPosition: '50%',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundHeight: '100%',
           }}
         />
         <ModelNameWrap>
           <ModelName>
             {car.make}
-            <span style={{ color: "#3470FF" }}> {car.model}</span>, {car.year}
+            <span style={{ color: '#3470FF' }}> {car.model}</span>, {car.year}
           </ModelName>
         </ModelNameWrap>
-        <ModelInfoWrap style={{ marginBottom: "14px" }}>
-          <ModelInfo>{car.address.split(", ")[1]}</ModelInfo>
-          <ModelInfo>{car.address.split(", ")[2]}</ModelInfo>
+        <ModelInfoWrap style={{ marginBottom: '14px' }}>
+          <ModelInfo>{car.address.split(', ')[1]}</ModelInfo>
+          <ModelInfo>{car.address.split(', ')[2]}</ModelInfo>
           <ModelInfo>{car.rentalCompany}</ModelInfo>
           <ModelInfo>{car.id}</ModelInfo>
           <ModelInfo>Fuel consumption: {car.fuelConsumption}</ModelInfo>
@@ -71,7 +72,7 @@ export const CarModal=({car, isOpen, handleClose})=> {
         </ModelInfoWrap>
         <CarDescription>{car.description}</CarDescription>
         <ModalHeaders>Accessories and functionalities:</ModalHeaders>
-        <ModelInfoWrap style={{ marginBottom: "24px" }}>
+        <ModelInfoWrap style={{ marginBottom: '24px' }}>
           {car.accessories.concat(car.functionalities).map((item, i) => {
             return <ModelInfo key={i}>{item}</ModelInfo>;
           })}
@@ -79,26 +80,26 @@ export const CarModal=({car, isOpen, handleClose})=> {
         <ModalHeaders>Rental Conditions</ModalHeaders>
         <RentalConditionsWrap>
           <RentalCondition>
-            {car.rentalConditions.split("\n")[0].split(": ")[0]}:{" "}
-            <span style={{ color: "#3470FF", fontWeight: "600" }}>
-              {car.rentalConditions.split("\n")[0].split(": ")[1]}
+            {car.rentalConditions.split('\n')[0].split(': ')[0]}:{' '}
+            <span style={{ color: '#3470FF', fontWeight: '600' }}>
+              {car.rentalConditions.split('\n')[0].split(': ')[1]}
             </span>
           </RentalCondition>
           <RentalCondition>
-            {car.rentalConditions.split("\n")[1]}
+            {car.rentalConditions.split('\n')[1]}
           </RentalCondition>
           <RentalCondition>
-            {car.rentalConditions.split("\n")[2]}
+            {car.rentalConditions.split('\n')[2]}
           </RentalCondition>
           <RentalCondition>
-            Mileage:{" "}
-            <span style={{ color: "#3470FF", fontWeight: "600" }}>
-              {car.mileage.toLocaleString("en-US")}
+            Mileage:{' '}
+            <span style={{ color: '#3470FF', fontWeight: '600' }}>
+              {car.mileage.toLocaleString('en-US')}
             </span>
           </RentalCondition>
           <RentalCondition>
-            Price:{" "}
-            <span style={{ color: "#3470FF", fontWeight: "600" }}>
+            Price:{' '}
+            <span style={{ color: '#3470FF', fontWeight: '600' }}>
               {car.rentalPrice}
             </span>
           </RentalCondition>

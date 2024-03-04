@@ -45,7 +45,15 @@ export const ListItem = ({ cars }) => {
   };
   const handleClose = () => {
     setClickedCar(null);
+<<<<<<< Updated upstream
     document.body.style.overflow = '';
+=======
+<<<<<<< HEAD
+    document.body.style.overflow = 'auto';
+=======
+    document.body.style.overflow = '';
+>>>>>>> 5b8fc10a78afe94dc73f11f810f1e1581feb9c85
+>>>>>>> Stashed changes
     setIsOpen(false);
   };
   const [clickedCar, setClickedCar] = useState(null);
@@ -61,58 +69,62 @@ export const ListItem = ({ cars }) => {
   };
   return (
     <>
-      {cars && cars.map((car) => {
-        return (
-          <ListItemWrapper key={car.id}>
-            {isInFavorite(car) ? (
-              <FavoriteButton
-                onClick={() => {
-                  handleRemoveFromFavorites(car);
+      {cars &&
+        cars.map(car => {
+          return (
+            <ListItemWrapper key={car.id}>
+              {isInFavorite(car) ? (
+                <FavoriteButton
+                  onClick={() => {
+                    handleRemoveFromFavorites(car);
+                  }}
+                >
+                  <FavoriteIcon style={favoriteIconSelected} />
+                </FavoriteButton>
+              ) : (
+                <FavoriteButton
+                  onClick={() => {
+                    handleAddToFavorites(car);
+                  }}
+                >
+                  <FavoriteBorderIcon style={favoriteIcon} />
+                </FavoriteButton>
+              )}
+              <ModelImageWrap
+                style={{
+                  background: `linear-gradient(180deg, rgba(18, 20, 23, 0.5) 2.5%, rgba(18, 20, 23, 0) 41.07%), url(${car.img})`,
+                  backgroundPosition: '50%',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundHeight: '100%',
                 }}
-              >
-                <FavoriteIcon style={favoriteIconSelected} />
-              </FavoriteButton>
-            ) : (
-              <FavoriteButton
-                onClick={() => {
-                  handleAddToFavorites(car);
-                }}
-              >
-                <FavoriteBorderIcon style={favoriteIcon} />
-              </FavoriteButton>
-            )}
-            <ModelImageWrap
-              style={{
-                background:
-                  `linear-gradient(180deg, rgba(18, 20, 23, 0.5) 2.5%, rgba(18, 20, 23, 0) 41.07%), url(${car.img})`,
-                backgroundPosition: "50%",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundHeight: "100%"
-              }}
-            />
-            <ModelNameWrap>
-              <ModelName>
-                {car.make}
-                <span style={{ color: "#3470FF" }}> {car.model}</span>,{" "}
-                {car.year}
-              </ModelName>
-              <ModelName>{car.rentalPrice}</ModelName>
-            </ModelNameWrap>
-            <ModelInfoWrap>
-              <ModelInfo>{car.address.split(", ")[1]}</ModelInfo>
-              <ModelInfo>{car.address.split(", ")[2]}</ModelInfo>
-              <ModelInfo>{car.rentalCompany}</ModelInfo>
-              <ModelInfo>{car.id}</ModelInfo>
-            </ModelInfoWrap>
-            <SeeMoreButton onClick={() => handleOpen(car)}>
-              See more
-            </SeeMoreButton>
-          </ListItemWrapper>
-        );
-      })}
+              />
+              <ModelNameWrap>
+                <ModelName>
+                  {car.make}
+                  <span style={{ color: '#3470FF' }}> {car.model}</span>,{' '}
+                  {car.year}
+                </ModelName>
+                <ModelName>{car.rentalPrice}</ModelName>
+              </ModelNameWrap>
+              <ModelInfoWrap>
+                <ModelInfo>{car.address.split(', ')[1]}</ModelInfo>
+                <ModelInfo>{car.address.split(', ')[2]}</ModelInfo>
+                <ModelInfo>{car.rentalCompany}</ModelInfo>
+                <ModelInfo>{car.id}</ModelInfo>
+              </ModelInfoWrap>
+              <SeeMoreButton onClick={() => handleOpen(car)}>
+                See more
+              </SeeMoreButton>
+            </ListItemWrapper>
+          );
+        })}
       {isOpen && (
-        <CarModal isOpen={isOpen} handleClose={handleClose} car={clickedCar} />
+        <CarModal
+          isOpen={isOpen}
+          handleClose={handleClose}
+          car={clickedCar}
+        />
       )}
     </>
   );
