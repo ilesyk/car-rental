@@ -45,15 +45,7 @@ export const ListItem = ({ cars }) => {
   };
   const handleClose = () => {
     setClickedCar(null);
-<<<<<<< Updated upstream
-    document.body.style.overflow = '';
-=======
-<<<<<<< HEAD
     document.body.style.overflow = 'auto';
-=======
-    document.body.style.overflow = '';
->>>>>>> 5b8fc10a78afe94dc73f11f810f1e1581feb9c85
->>>>>>> Stashed changes
     setIsOpen(false);
   };
   const [clickedCar, setClickedCar] = useState(null);
